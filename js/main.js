@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#addUserEmail").click(function() {
         analytics.identify({
+            userId: 'cool.person@example.com',
             email: 'cool.person@example.com'
           });
         console.log("addUserEmail");
