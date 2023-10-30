@@ -16,12 +16,12 @@ window.addEventListener(
             // and update the event with the data
             $.ajax({
                 type: 'GET',
-                CORS: true ,
-                contentType:'application/json',
-                secure: true,
                 headers: {
                     'Access-Control-Allow-Origin': '*'
                 },
+                CORS: true,
+                crossDomain: true,
+                dataType: 'json',
                 url: `https://manage-calendly-event.vercel.app/api/getinviteeinfo?eventId=${eventId}&inviteeId=${inviteeId}`,
                 success: function(data) {
                     console.log(data);
