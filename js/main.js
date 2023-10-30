@@ -1,7 +1,10 @@
 $(document).ready(function() {
     $("#addUserEmail").click(function() {
-        analytics.identify('cool.person@example.com', {
-            email: 'cool.person@example.com'
+        // generate a 4 letter random string
+        var randomString = Math.random().toString(36).substring(2, 6);
+        var testEmail = "test." +randomString + "@example.com";
+        analytics.identify(testEmail, {
+            email: testEmail
           });
         console.log("addUserEmail");
       });
